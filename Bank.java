@@ -87,4 +87,38 @@ public class Bank {
 
         System.out.println("No account found with that ID.");
     }
+
+    // views transactions
+    public void viewTransactions(Scanner input) {
+        System.out.println("");
+        System.out.print("Enter account ID: ");
+        int accountID = input.nextInt();
+        input.nextLine();
+
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(i).getAccNumber() == accountID) {
+                accounts.get(i).displayTransactions();
+                return;
+            }
+        }
+
+        System.out.println("No account found with that ID.");
+    }
+
+    // checks balance
+    public void checkBalance(Scanner input) {
+        System.out.println("");
+        System.out.print("Enter account ID: ");
+        int accountID = input.nextInt();
+        input.nextLine();
+
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(i).getAccNumber() == accountID) {
+                System.out.println("Current balance: $" + accounts.get(i).getBalance());
+                return;
+            }
+        }
+
+        System.out.println("No account found with that ID.");
+    }
 }

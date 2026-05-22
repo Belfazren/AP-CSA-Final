@@ -13,7 +13,9 @@ public class Main {
             System.out.println("2. Delete Account");
             System.out.println("3. Deposit Money");
             System.out.println("4. Withdraw Money");
-            System.out.println("5. Exit");
+            System.out.println("5. View Transactions");
+            System.out.println("6. Check Balance");
+            System.out.println("7. Exit");
             System.out.println("");
             System.out.print("Choose an option: ");
 
@@ -46,6 +48,12 @@ public class Main {
                 bank.withdrawMoney(input);
             }
             else if (choice == 5) {
+                bank.viewTransactions(input);
+            }
+            else if (choice == 6) {
+                bank.checkBalance(input);
+            }
+            else if (choice == 7) {
                 System.out.println("Goodbye.");
                 running = false;
             } 
