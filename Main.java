@@ -11,7 +11,10 @@ public class Main {
             System.out.println("===== Bank Account Manager =====");
             System.out.println("1. Create Account");
             System.out.println("2. Delete Account");
-            System.out.println("3. Exit");
+            System.out.println("3. Deposit Money");
+            System.out.println("4. Withdraw Money");
+            System.out.println("5. Exit");
+            System.out.println("");
             System.out.print("Choose an option: ");
 
             int choice = input.nextInt();
@@ -37,6 +40,12 @@ public class Main {
                 bank.deleteAccount(input);
             } 
             else if (choice == 3) {
+                bank.depositMoney(input);
+            }
+            else if (choice == 4) {
+                bank.withdrawMoney(input);
+            }
+            else if (choice == 5) {
                 System.out.println("Goodbye.");
                 running = false;
             } 
